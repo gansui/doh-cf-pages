@@ -7,8 +7,8 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
-const doh = 'https://1.1.1.1/dns-query'
-const dohjson = 'https://1.1.1.1/dns-query'
+const doh = 'https://dns10.quad9.net/dns-query'
+const dohjson = 'https://dns10.quad9.net/dns-query'
 const contype = 'application/dns-message'
 const jstontype = 'application/dns-json'
 
