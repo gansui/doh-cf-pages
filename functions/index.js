@@ -15,12 +15,14 @@ const jstontype = 'application/dns-json'
 export default {
 	async fetch(request, env, ctx) {
         const { headers } = request.headers
- 		 if (headers.get('content-type')===contype) {
-        	return fetch(doh, {
-            	method: 'POST',
-            	headers: headers,
-            	body: request.body,
+ 		if (headers.get('content-type')===contype) {
+        	const response = await fetch(doh, {
+            		method: 'POST',
+            		headers: headers,
+            		body: request.body,
         	});
+		console.log(response);
+		return response;
         } else {
         	return new Response("", {status: 404})
     	}
